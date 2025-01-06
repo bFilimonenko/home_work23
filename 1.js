@@ -14,22 +14,22 @@
 // Наявність методів addProduct, getProductCalories, та removeProduct.
 
 class CalorieCalculator {
-  productCalories;
+  #productCalories;
 
   constructor() {
-    this.productCalories = new Map();
+    this.#productCalories = new Map();
   }
 
   addProduct(product, calories) {
-    return this.productCalories.set(product, calories);
+    return this.#productCalories.set(product, calories);
   }
 
   getProductCalories(productName) {
-    return this.productCalories.get(productName) || "Product not found";
+    return this.#productCalories.get(productName) || "Product not found";
   }
 
   removeProduct(productName) {
-    return this.productCalories.delete(productName);
+    return this.#productCalories.delete(productName);
   }
 }
 

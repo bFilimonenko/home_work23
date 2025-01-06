@@ -14,22 +14,22 @@
 // Застосування new Set() для внутрішнього сховища імен користувачів у конструкторі класу.
 
 class UniqueUsernames {
-  usernames;
+  #usernames;
 
   constructor() {
-    this.usernames = new Set;
+    this.#usernames = new Set();
   }
 
   addUser(username) {
-    return this.usernames.add(username);
+    return this.#usernames.add(username);
   }
 
   exists(username) {
-    return this.usernames.has(username);
+    return this.#usernames.has(username);
   }
 
   count() {
-    return this.usernames.size;
+    return this.#usernames.size;
   }
 }
 
